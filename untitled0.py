@@ -9,7 +9,7 @@ import turtle
 screen = turtle.Screen()
 screen.setup(700, 700)
 screen.bgcolor("#f7f7f7")
-turtle.speed(0)
+turtle.speed(20)
 turtle.title('Farewell Reine!')
 
 #Background
@@ -113,3 +113,5 @@ turtle.color("Black")
 turtle.goto(-250, -330)
 turtle.write("~Love, CRADLE", font=("Exo", 20, "italic"))
 turtle.hideturtle()  
+
+turtle.Screen().exitonclick()
