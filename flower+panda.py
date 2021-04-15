@@ -6,6 +6,7 @@ Bye Reine :(
 #To close turtle window type turtle.bye()
 import turtle
 from random import randint
+import time
 
 screen = turtle.Screen()
 screen.setup(700, 700)
@@ -13,32 +14,38 @@ screen.bgcolor("#f7f7f7")
 turtle.speed(1)
 turtle.title('Farewell Reine!')
 
-messages = {'Meena':['All the best at your new job.',' Take care'], 
-            'Litong':['All the best at your new job.',' Take care'], 
-            'Esther':['All the best at your new job.',' Take care'], 
-            'Alicia':['All the best at your new job.',' Take care'],
-            'Zhan Jie':['All the best at your new job.',' Take care']}
+messages = {'Meena':['Give us vouchers please','Thank you very much!'], 
+            'Li Tong':['All the best at your new job.','Take care'], 
+            'Esther':['All the best at your new job.','Take care'], 
+            'Alicia':['Dear Reine, Thank you for your hard work', 'and creativity throughout this project','It has been a pleasure working with you', 'and I wish you all the best in your future endeavours.'],
+            'Shien':['Enjoyed talking to you and I\'ll miss','your cheerfulness. All the best :)']}
 
 def text(turtle, i, color, x, y):
     turtle.penup()
     turtle.color(color)
     turtle.goto(x,y)
-    txt = str(messages[i][0]+'\n'+messages[i][1]+'\n'+'~'+i)
+    a = len(messages[i])
+    txt=''
+    while a > 0:
+        txt = txt+str(messages[i][0]+'\n')
+        del messages[i][0]
+        a-=1
+    txt = txt+str('~'+i)
     turtle.write(txt, font=("Exo", 12, "italic"))
     turtle.hideturtle()
     
 #messages
 turtle.colormode(255)
-color=(randint(0, 255), randint(0, 255), randint(0, 255))
 for i in messages.keys():
-    x=randint(-350,250)
-    y=randint(-280,350)
+    x=randint(-280,100)
+    y=randint(-280,250)
     print(x,y)
-    color=(randint(0, 255), randint(0, 255), randint(0, 255))
+    color=(randint(150, 255), randint(150, 255), randint(150, 255))
     text(turtle, i, color, x, y)
-
+    time.sleep(4)
+    turtle.clear()
+    
 turtle.speed(0)
-
 #Background
 turtle.penup()
 turtle.goto(0, -300)
