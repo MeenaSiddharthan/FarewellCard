@@ -10,38 +10,55 @@ from random import randint
 screen = turtle.Screen()
 screen.setup(700, 700)
 screen.bgcolor("#f7f7f7")
-turtle.speed(0)
+turtle.speed(-50)
 turtle.title('Farewell Reine!')
 
-#flower
-def draw_flower (turtle, color, x, y):
-    for i in range(5): #no of petals
-        turtle.penup()
-        turtle.color(color)
-        turtle.goto(x,y)
-        turtle.pendown()    
-        turtle.begin_fill()
-        heading = turtle.heading()
-        turtle.circle(10, 90)
-        turtle.left(90)
-        turtle.circle(10, 90)
-        turtle.setheading(heading)
-        turtle.left(72) #360/no of petals
-        turtle.end_fill()
-        turtle.hideturtle()  
+messages = {'Meena':'Bye babe', 'Litong':'Bonsoir!', 'Esther':'Nihao'}
+
+def text(turtle, i, color, x, y):
+    turtle.penup()
+    turtle.color(color)
+    turtle.goto(x,y)
+    txt = str(messages[i]+'\n'+'~'+i)
+    turtle.write(txt, font=("Exo", 12, "italic"))
+    turtle.hideturtle()
+    
+##flower
+#def draw_flower (turtle, color, x, y):
+#    for i in range(5): #no of petals
+#        turtle.penup()
+#        turtle.color(color)
+#        turtle.goto(x,y)
+#        turtle.pendown()    
+#        turtle.begin_fill()
+#        heading = turtle.heading()
+#        turtle.circle(10, 90)
+#        turtle.left(90)
+#        turtle.circle(10, 90)
+#        turtle.setheading(heading)
+#        turtle.left(72) #360/no of petals
+#        turtle.end_fill()
+#        turtle.hideturtle()  
 #flower rain
 x=0
 y=0
 j=0
 turtle.colormode(255)
 color=(randint(0, 255), randint(0, 255), randint(0, 255))
-while j <10:
-    draw_flower(turtle, color, x, y)	
-    x=randint(-350,350)
-    y=randint(-350,350)
+for i in messages.keys():
+    x=randint(-350,250)
+    y=randint(-280,350)
     print(x,y)
-    j+=1
     color=(randint(0, 255), randint(0, 255), randint(0, 255))
+    text(turtle, i, color, x, y)
+    
+#while a > 0:
+#    print(messages[a]+'\n'+'~'+)
+#    x=randint(-350,350)
+#    y=randint(-350,350)
+#    print(x,y)
+#    a-=1
+#    color=(randint(0, 255), randint(0, 255), randint(0, 255))
 
 #Background
 turtle.penup()
