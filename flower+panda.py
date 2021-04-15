@@ -37,10 +37,10 @@ def text(turtle, i, color, x, y):
 #messages
 turtle.colormode(255)
 for i in messages.keys():
-    x=randint(-280,80)
+    x=randint(-280,60)
     y=randint(-280,250)
     print(x,y)
-    color=(randint(150, 255), randint(150, 255), randint(150, 255))
+    color=(randint(0, 150), randint(0, 150), randint(0, 150))
     text(turtle, i, color, x, y)
     time.sleep(4)
     turtle.clear()
