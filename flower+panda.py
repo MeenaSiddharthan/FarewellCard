@@ -13,13 +13,17 @@ screen.bgcolor("#f7f7f7")
 turtle.speed(-50)
 turtle.title('Farewell Reine!')
 
-messages = {'Meena':'Bye babe', 'Litong':'Bonsoir!', 'Esther':'Nihao'}
+messages = {'Meena':['All the best at your new job.',' Take care'], 
+            'Litong':['All the best at your new job.',' Take care'], 
+            'Esther':['All the best at your new job.',' Take care'], 
+            'Alicia':['All the best at your new job.',' Take care'],
+            'Zhan Jie':['All the best at your new job.',' Take care']}
 
 def text(turtle, i, color, x, y):
     turtle.penup()
     turtle.color(color)
     turtle.goto(x,y)
-    txt = str(messages[i]+'\n'+'~'+i)
+    txt = str(messages[i][0]+'\n'+messages[i][1]+'\n'+'~'+i)
     turtle.write(txt, font=("Exo", 12, "italic"))
     turtle.hideturtle()
     
@@ -40,9 +44,6 @@ def text(turtle, i, color, x, y):
 #        turtle.end_fill()
 #        turtle.hideturtle()  
 #flower rain
-x=0
-y=0
-j=0
 turtle.colormode(255)
 color=(randint(0, 255), randint(0, 255), randint(0, 255))
 for i in messages.keys():
