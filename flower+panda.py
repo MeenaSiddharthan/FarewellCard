@@ -15,9 +15,10 @@ turtle.speed(1)
 turtle.title('Farewell Reine!')
 
 messages = {'Meena':['Give us vouchers please','Thank you very much!'], 
-            'Li Tong':['All the best at your new job.','Take care'], 
+            'Li Tong':['Dear Reine, it\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see foodpanda haha!','All the best and take care :)'], 
             'Esther':['All the best at your new job.','Take care'], 
             'Alicia':['Dear Reine, Thank you for your hard work', 'and creativity throughout this project','It has been a pleasure working with you', 'and I wish you all the best in your future endeavours.'],
+            'Tiffany':['Dear Reine, It’s very nice to meet you', 'although it has only been a few months.','I’m glad that I have chances to work with you :)', 'Wish you all the best in your new job and the future!'],            
             'Shien':['Enjoyed talking to you and I\'ll miss','your cheerfulness. All the best :)']}
 
 def text(turtle, i, color, x, y):
@@ -33,22 +34,46 @@ def text(turtle, i, color, x, y):
     txt = txt+str('~'+i)
     turtle.write(txt, font=("Exo", 12, "italic"))
     turtle.hideturtle()
-    
+
+def draw_flower (turtle, color, x1, y1):
+    for i in range(5): #no of petals
+        turtle.penup()
+        turtle.color(color)
+        turtle.goto(x1,y1)
+        turtle.pendown()    
+        turtle.begin_fill()
+        heading = turtle.heading()
+        turtle.circle(10, 90)
+        turtle.left(75)
+        turtle.circle(10, 90)
+        turtle.setheading(heading)
+        turtle.left(72) #360/no of petals
+        turtle.end_fill()
+        turtle.hideturtle()  
+
 #messages
 turtle.colormode(255)
 for i in messages.keys():
-    x=randint(-280,60)
-    y=randint(-280,250)
+    x=randint(-250,-20)
+    y=randint(-100,100)
     print(x,y)
-    color=(randint(0, 150), randint(0, 150), randint(0, 150))
+    color=(randint(0, 100), randint(0, 100), randint(0, 100))
     text(turtle, i, color, x, y)
-    time.sleep(4)
+    j=0
+    while j<6:
+        turtle.speed(0)
+        x1=randint(-300,300)
+        y1=randint(-300,300)
+        color=(randint(101, 200), randint(101, 200), randint(101, 200))
+        draw_flower(turtle, color, x1, y1)
+        j+=1
+#    time.sleep(4)
     turtle.clear()
-    
+
 turtle.speed(0)
 #Background
 turtle.penup()
-turtle.goto(0, -300)
+turtle.goto(0, -270)
 turtle.pendown()
 turtle.color("#d9337a")
 turtle.begin_fill()
