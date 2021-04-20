@@ -14,11 +14,12 @@ screen.bgcolor("#f7f7f7")
 turtle.speed(1)
 turtle.title('Farewell Reine!')
 
-messages = {'Meena':['Give us vouchers please','Thank you very much!'], 
-            'Li Tong':['Dear Reine, it\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see foodpanda haha!','All the best and take care :)'], 
+messages = {'Meena':['Hi Reine', 'Thank you for imparting some of your knowledge', 'onto us! We used it to make this E-card', 'We hope you like it! Keep in touch!'], 
+            'Li Tong':['Dear Reine,', 'it\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see foodpanda haha!','All the best and take care :)'], 
             'Esther':['All the best at your new job.','Take care'], 
-            'Alicia':['Dear Reine, Thank you for your hard work', 'and creativity throughout this project','It has been a pleasure working with you', 'and I wish you all the best in your future endeavours.'],
-            'Tiffany':['Dear Reine, It’s very nice to meet you', 'although it has only been a few months.','I’m glad that I have chances to work with you :)', 'Wish you all the best in your new job and the future!'],            
+            'Prof Annabel':['Dear Reine,','Thanks for your good efforts and contributions', 'to our project. Your creative ideas are most','appreciated. All the very best for your','new job and future endeavours.'],
+            'Tiffany':['Dear Reine,','It\'s been very nice to meet you although', 'it has only been a few months, I’m glad' ,'that I had chance to work with you :)', 'Wish you all the best in your new job and future!'],
+            'Alicia':['Dear Reine,', 'Thank you for your hard work and creativity', 'throughout this project. It has been a pleasure', 'working with you and I wish you all the best', 'in your future endeavours.'],
             'Shien':['Enjoyed talking to you and I\'ll miss','your cheerfulness. All the best :)']}
 
 def text(turtle, i, color, x, y):
@@ -59,15 +60,6 @@ for i in messages.keys():
     print(x,y)
     color=(randint(0, 100), randint(0, 100), randint(0, 100))
     text(turtle, i, color, x, y)
-    j=0
-    while j<6:
-        turtle.speed(0)
-        x1=randint(-300,300)
-        y1=randint(-300,300)
-        color=(randint(101, 200), randint(101, 200), randint(101, 200))
-        draw_flower(turtle, color, x1, y1)
-        j+=1
-#    time.sleep(4)
     turtle.clear()
 
 turtle.speed(0)
@@ -167,7 +159,7 @@ turtle.circle(100,130)
 turtle.penup()
 turtle.color("Black")
 turtle.goto(-300, -300)
-turtle.write("We will miss you give us food!!", font=("Exo", 25, "bold"))
+turtle.write("All the best at your new job, we will miss you!!", font=("Exo", 25, "bold"))
 turtle.penup()
 turtle.color("Black")
 turtle.goto(-250, -330)
