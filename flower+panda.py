@@ -17,7 +17,9 @@ turtle.title('Farewell Reine!')
 messages = {'Meena':['Give us vouchers please','Thank you very much!'], 
             'Li Tong':['All the best at your new job.','Take care'], 
             'Esther':['All the best at your new job.','Take care'], 
-            'Alicia':['Dear Reine, Thank you for your hard work', 'and creativity throughout this project','It has been a pleasure working with you', 'and I wish you all the best in your future endeavours.'],
+            'Prof Annabel':['Dear Reine,','Thanks for your good efforts and contributions', 'to our project. Your creative ideas','are most appreciated.', 'All the very best for your new job and future endeavours.'],
+            'Tiffany':['Dear Reine,','It\'s been very nice to meet you', 'although it has only been a few months.,' 'I’m glad that I have chance', 'to work with you :) Wish you all the','best in your new job and the future!'],
+            'Alicia':['Dear Reine, Thank you for your hard work', 'and creativity throughout this project','It has been a pleasure working with you and', 'I wish you all the best in your future endeavours.'],
             'Shien':['Enjoyed talking to you and I\'ll miss','your cheerfulness. All the best :)']}
 
 def text(turtle, i, color, x, y):
