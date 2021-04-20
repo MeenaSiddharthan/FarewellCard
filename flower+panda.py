@@ -15,7 +15,7 @@ turtle.speed(1)
 turtle.title('Farewell Reine!')
 
 messages = {'Meena':['Hi Reine', 'Thank you for imparting some of your knowledge', 'onto us! We used it to make this E-card', 'We hope you like it! Keep in touch!'], 
-            'Li Tong':['Dear Reine,', 'it\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see foodpanda haha!','All the best and take care :)'], 
+            'Li Tong':['Dear Reine,', 'It\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see foodpanda haha!','All the best and take care :)'], 
             'Esther':['All the best at your new job.','Take care'], 
             'Prof Annabel':['Dear Reine,','Thanks for your good efforts and contributions', 'to our project. Your creative ideas are most','appreciated. All the very best for your','new job and future endeavours.'],
             'Tiffany':['Dear Reine,','It\'s been very nice to meet you although', 'it has only been a few months, I’m glad' ,'that I had chance to work with you :)', 'Wish you all the best in your new job and future!'],
@@ -60,6 +60,15 @@ for i in messages.keys():
     print(x,y)
     color=(randint(0, 100), randint(0, 100), randint(0, 100))
     text(turtle, i, color, x, y)
+    j=0
+    while j<6:
+        turtle.speed(0)
+        x1=randint(-300,300)
+        y1=randint(-300,300)
+        color=(randint(101, 200), randint(101, 200), randint(101, 200))
+        draw_flower(turtle, color, x1, y1)
+        j+=1
+#    time.sleep(4)
     turtle.clear()
 
 turtle.speed(0)
@@ -158,8 +167,8 @@ turtle.circle(100,130)
 #insert textbox
 turtle.penup()
 turtle.color("Black")
-turtle.goto(-300, -300)
-turtle.write("All the best at your new job, we will miss you!!", font=("Exo", 25, "bold"))
+turtle.goto(-345, -300)
+turtle.write("All the best at your new job, we will miss you!!", font=("Exo", 23, "bold"))
 turtle.penup()
 turtle.color("Black")
 turtle.goto(-250, -330)
