@@ -15,7 +15,7 @@ turtle.speed(1)
 turtle.title('Farewell Reine!')
 
 messages = {'Meena':['Hi Reine', 'Thank you for imparting some of your knowledge', 'onto us! We used it to make this E-card', 'We hope you like it! Keep in touch!'], 
-            'Li Tong':['Dear Reine,', 'It\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see','foodpanda! All the best and take care :)'], 
+            'Li Tong':['Dear Reine,', 'It\'s been great to have you here,','I\'ve enjoyed working and learning with you.'Thank you for being such a sweet friend!'','All the best and take care :)'], 
             'Esther':['Hi Reine','Hope that you can carve out a meaningful', 'career with the hard work you put in.', 'I\'ll miss seeing you around but I\'m','happy for you! All The Best!!!'], 
             'Prof Annabel':['Dear Reine,','Thanks for your good efforts and contributions', 'to our project. Your creative ideas are most','appreciated. All the very best for your','new job and future endeavours.'],
             'Tiffany':['Dear Reine,','It\'s been very nice to meet you although', 'it has only been a few months, I’m glad' ,'that I had chance to work with you :)', 'Wish you all the best in your new job and future!'],
