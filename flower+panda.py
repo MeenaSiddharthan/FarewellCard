@@ -15,12 +15,12 @@ turtle.speed(1)
 turtle.title('Farewell Reine!')
 
 messages = {'Meena':['Hi Reine', 'Thank you for imparting some of your knowledge', 'onto us! We used it to make this E-card', 'We hope you like it! Keep in touch!'], 
-            'Li Tong':['Dear Reine,', 'it\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see foodpanda haha!','All the best and take care :)'], 
-            'Esther':['All the best at your new job.','Take care'], 
+            'Li Tong':['Dear Reine,', 'It\'s been great to have you here,','I\'ve enjoyed working and learning with you.','Gonna miss you especially when I see','foodpanda! All the best and take care :)'], 
+            'Esther':['Hi Reine','Hope that you can carve out a meaningful', 'career with the hard work you put in.', 'I\'ll miss seeing you around but I\'m','happy for you! All The Best!!!'], 
             'Prof Annabel':['Dear Reine,','Thanks for your good efforts and contributions', 'to our project. Your creative ideas are most','appreciated. All the very best for your','new job and future endeavours.'],
             'Tiffany':['Dear Reine,','It\'s been very nice to meet you although', 'it has only been a few months, I’m glad' ,'that I had chance to work with you :)', 'Wish you all the best in your new job and future!'],
             'Alicia':['Dear Reine,', 'Thank you for your hard work and creativity', 'throughout this project. It has been a pleasure', 'working with you and I wish you all the best', 'in your future endeavours.'],
-            'Shien':['Enjoyed talking to you and I\'ll miss','your cheerfulness. All the best :)']}
+            'Shien':['I enjoyed talking to you and I\'ll miss','your cheerfulness. All the best :)']}
 
 def text(turtle, i, color, x, y):
     turtle.penup()
@@ -36,22 +36,6 @@ def text(turtle, i, color, x, y):
     turtle.write(txt, font=("Exo", 12, "italic"))
     turtle.hideturtle()
 
-def draw_flower (turtle, color, x1, y1):
-    for i in range(5): #no of petals
-        turtle.penup()
-        turtle.color(color)
-        turtle.goto(x1,y1)
-        turtle.pendown()    
-        turtle.begin_fill()
-        heading = turtle.heading()
-        turtle.circle(10, 90)
-        turtle.left(75)
-        turtle.circle(10, 90)
-        turtle.setheading(heading)
-        turtle.left(72) #360/no of petals
-        turtle.end_fill()
-        turtle.hideturtle()  
-
 #messages
 turtle.colormode(255)
 for i in messages.keys():
@@ -60,14 +44,16 @@ for i in messages.keys():
     print(x,y)
     color=(randint(0, 100), randint(0, 100), randint(0, 100))
     text(turtle, i, color, x, y)
+    time.sleep(7)
     turtle.clear()
 
 turtle.speed(0)
+screen.bgcolor("#d9337a")
 #Background
 turtle.penup()
 turtle.goto(0, -270)
 turtle.pendown()
-turtle.color("#d9337a")
+turtle.color("#f7f7f7")
 turtle.begin_fill()
 turtle.circle(450)
 turtle.end_fill()
@@ -78,7 +64,7 @@ turtle.speed(0)
 turtle.penup()
 turtle.goto(-60,0)
 turtle.pendown()
-turtle.color("white")
+turtle.color("#d9337a")
 def draw_triangle(length):
     for i in range(3):
         turtle.forward(length)
@@ -91,21 +77,21 @@ turtle.end_fill()
 turtle.penup()
 turtle.goto(150,50)
 turtle.pendown()
-turtle.color("white")
+turtle.color("#d9337a")
 turtle.begin_fill()
 turtle.circle(90)
 turtle.end_fill()
 
-turtle.penup()
-turtle.goto(150,50)
-turtle.pendown()
-turtle.color("#c5c5c5")
-turtle.begin_fill()
-turtle.circle(50)
-turtle.end_fill()
+# turtle.penup()
+# turtle.goto(150,50)
+# turtle.pendown()
+# turtle.color("white")
+# turtle.begin_fill()
+# turtle.circle(50)
+# turtle.end_fill()
 
 turtle.penup()
-turtle.goto(150,70)
+turtle.goto(110,150)
 turtle.pendown()
 turtle.color("white")
 turtle.begin_fill()
@@ -116,21 +102,21 @@ turtle.end_fill()
 turtle.penup()
 turtle.goto(-150,50)
 turtle.pendown()
-turtle.color("white")
+turtle.color("#d9337a")
 turtle.begin_fill()
 turtle.circle(90)
 turtle.end_fill()
 
-turtle.penup()
-turtle.goto(-150,50)
-turtle.pendown()
-turtle.color("#c5c5c5")
-turtle.begin_fill()
-turtle.circle(50)
-turtle.end_fill()
+# turtle.penup()
+# turtle.goto(-150,50)
+# turtle.pendown()
+# turtle.color("white")
+# turtle.begin_fill()
+# turtle.circle(50)
+# turtle.end_fill()
 
 turtle.penup()
-turtle.goto(-150,70)
+turtle.goto(-110,150)
 turtle.pendown()
 turtle.color("white")
 turtle.begin_fill()
@@ -142,7 +128,7 @@ turtle.penup()
 turtle.goto(0,-90)
 turtle.pendown()
 turtle.pensize(10)
-turtle.color("white")
+turtle.color("#d9337a")
 turtle.setheading(90)
 turtle.circle(100,-130)
 
@@ -151,7 +137,7 @@ turtle.penup()
 turtle.goto(0,-90)
 turtle.pendown()
 turtle.pensize(10)
-turtle.color("white")
+turtle.color("#d9337a")
 turtle.setheading(-90)
 turtle.circle(100,130)
 
@@ -159,7 +145,7 @@ turtle.circle(100,130)
 turtle.penup()
 turtle.color("Black")
 turtle.goto(-300, -300)
-turtle.write("All the best at your new job, we will miss you!!", font=("Exo", 25, "bold"))
+turtle.write("All the best, we will miss you!!", font=("Exo", 25, "bold"))
 turtle.penup()
 turtle.color("Black")
 turtle.goto(-250, -330)
