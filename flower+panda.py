@@ -36,6 +36,22 @@ def text(turtle, i, color, x, y):
     turtle.write(txt, font=("Exo", 12, "italic"))
     turtle.hideturtle()
 
+def draw_flower (turtle, color, x1, y1):
+    for i in range(5): #no of petals
+        turtle.penup()
+        turtle.color(color)
+        turtle.goto(x1,y1)
+        turtle.pendown()    
+        turtle.begin_fill()
+        heading = turtle.heading()
+        turtle.circle(10, 90)
+        turtle.left(75)
+        turtle.circle(10, 90)
+        turtle.setheading(heading)
+        turtle.left(72) #360/no of petals
+        turtle.end_fill()
+        turtle.hideturtle()  
+
 #messages
 turtle.colormode(255)
 for i in messages.keys():
@@ -44,7 +60,15 @@ for i in messages.keys():
     print(x,y)
     color=(randint(0, 100), randint(0, 100), randint(0, 100))
     text(turtle, i, color, x, y)
-    time.sleep(7)
+    j=0
+    while j<6:
+        turtle.speed(0)
+        x1=randint(-300,300)
+        y1=randint(-300,300)
+        color=(randint(101, 200), randint(101, 200), randint(101, 200))
+        draw_flower(turtle, color, x1, y1)
+        j+=1
+#    time.sleep(4)
     turtle.clear()
 
 turtle.speed(0)
