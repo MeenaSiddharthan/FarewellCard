@@ -68,7 +68,7 @@ for i in messages.keys():
         color=(randint(101, 200), randint(101, 200), randint(101, 200))
         draw_flower(turtle, color, x1, y1)
         j+=1
-#    time.sleep(4)
+    time.sleep(5)
     turtle.clear()
 
 turtle.speed(0)
