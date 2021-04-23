@@ -21,6 +21,7 @@ messages = {'Meena':['Hi Reine', 'Thank you for imparting some of your knowledge
             'Tiffany':['Dear Reine,','It\'s been very nice to meet you although', 'it has only been a few months, I’m glad' ,'that I had chance to work with you :)', 'Wish you all the best in your new job and future!'],
             'Alicia':['Dear Reine,', 'Thank you for your hard work and creativity', 'throughout this project. It has been a pleasure', 'working with you and I wish you all the best', 'in your future endeavours.'],
             'Shien':['I enjoyed talking to you and I\'ll miss','your cheerfulness. All the best :)'],
+            'Zhan Jie':['Hi Reine,','Great to have known you at CRADLE and', 'earnestly wishing you the best in your next job!', 'Stay positive always!'],
             'Tam': ['Hi Reine,', 'Catch you at your home (lol ','self invite) for some acai bowl!'],
             'Zen': ['Hi Reineeeeee,', 'You have inspired me to get', 'some avocado socks :))))', 'Catch you super soon ;)']}
 
