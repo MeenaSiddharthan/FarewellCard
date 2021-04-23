@@ -1,10 +1,4 @@
-# 5 Min Christmas Cards with Python
+# A special goodbye message for a special colleague
 
-If you want to make custom christmas cards and send it to family/friends then feel free to edit this code and use it for yourself.
-
-Directions:
-
-In the same directory place both files
-Edit the cards.py file with your name and custom greeting
-
-A youtube example is here: https://youtu.be/Goz15bLJ1fg
+This card is tailor made for a <i>colleague/friend/soon-to-be ex-colleague</i>.
+<p>We hope you like the messages, illustration and animation :)</p>
